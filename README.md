@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+Hangman Game
+A modern, React-based implementation of the classic Hangman word-guessing game. This project was created as part of a portfolio to demonstrate front-end development skills.
+Live Demo
+The game is deployed and playable at: https://hangman-game.vercel.app (replace with your actual Vercel URL)
+Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interactive gameplay with virtual keyboard
+Multiple word categories (Programming, Animals, Countries, Movies)
+Category selection before starting a game
+Mobile-responsive design for gameplay on any device
+Visual hangman display that updates with incorrect guesses
+Win/lose game states with option to play again
 
-## Available Scripts
+Technologies Used
 
-In the project directory, you can run:
+React (Create React App)
+JavaScript (ES6+)
+HTML5
+CSS3
+Git/GitHub for version control
+Vercel for deployment
 
-### `npm start`
+Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+src/components/Game.js - Main game logic and state management
+src/components/Word.js - Word display component
+src/components/Keyboard.js - Virtual keyboard component
+src/components/Hangman.js - SVG-based hangman visualization
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Getting Started
+Prerequisites
 
-### `npm test`
+Node.js 18+ and npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Installation
 
-### `npm run build`
+Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bashCopygit clone https://github.com/ECJMac/Hangman-Game.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bashCopycd hangman-game
 
-### `npm run eject`
+Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bashCopynpm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bashCopynpm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open http://localhost:3000 to view it in the browser.
 
-## Learn More
+Planned Enhancements
+Gameplay Enhancements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ Difficulty levels (Easy, Medium, Hard)
+ Scoring system with high scores
+ Hint system for words
+ Timer for additional challenge
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Visual Improvements
 
-### Code Splitting
+ Animations for correct/incorrect guesses
+ Theme options (Light/Dark mode)
+ Enhanced hangman visualization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Technical Enhancements
 
-### Analyzing the Bundle Size
+ Fetch words from an external API
+ User accounts and leaderboards
+ Convert to Progressive Web App (PWA)
+ Add sound effects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Portfolio Context
+This project is part of a larger portfolio that includes:
 
-### Making a Progressive Web App
+Hangman Game (Current project)
+Online Marketplace (Planned)
+Weather Application with API Integration (Planned)
+Personal Portfolio Website (Planned)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+License
+This project is open source and available under the MIT License.
+Acknowledgments
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created as part of a software development portfolio project
+Word categories and game design inspired by classic Hangman games
