@@ -1,7 +1,7 @@
 Hangman Game
 A modern, React-based implementation of the classic Hangman word-guessing game. This project was created as part of a portfolio to demonstrate front-end development skills.
 Live Demo
-The game is deployed and playable at: https://hangman-game.vercel.app (replace with your actual Vercel URL)
+The game is deployed and playable at: (https://hangman-game-chi-nine.vercel.app/)
 Features
 
 Interactive gameplay with virtual keyboard
