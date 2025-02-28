@@ -1,16 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .App-header {
@@ -20,19 +11,127 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.word-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.letter {
+  font-size: 2rem;
+  margin: 0 5px;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  width: 30px;
+  display: inline-block;
+}
+
+.keyboard-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.key {
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  color: #282c34;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 2px;
+  padding: 10px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.key:hover:not(:disabled) {
+  background-color: #21a1c7;
+}
+
+.key:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.key.correct {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.key.wrong {
+  background-color: #dc3545;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hangman-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.game-message {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.game-message button {
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  color: #282c34;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.game-message button:hover {
+  background-color: #21a1c7;
+}
+
+/* Make it responsive for mobile */
+@media (max-width: 500px) {
+  .letter {
+    font-size: 1.5rem;
+    width: 20px;
+    margin: 0 3px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .key {
+    font-size: 0.8rem;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 0 1px;
+  }
+
+  .hangman-figure {
+    height: 200px;
+    width: 160px;
   }
 }
