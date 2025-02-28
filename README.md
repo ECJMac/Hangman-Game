@@ -18,17 +18,25 @@ Win/lose game states with option to play again
 **Technologies Used**
 
 React (Create React App)
+
 JavaScript (ES6+)
+
 HTML5
+
 CSS3
+
 Git/GitHub for version control
+
 Vercel for deployment
 
 **Project Structure**
 
 src/components/Game.js - Main game logic and state management
+
 src/components/Word.js - Word display component
+
 src/components/Keyboard.js - Virtual keyboard component
+
 src/components/Hangman.js - SVG-based hangman visualization
 
 **Getting Started**
