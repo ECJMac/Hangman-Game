@@ -3,35 +3,10 @@ import React, { useState, useEffect } from "react";
 import Word from "./Word";
 import Keyboard from "./Keyboard";
 import Hangman from "./Hangman";
-
-// Array of words for our game by category
-const wordsByCategory = {
-  programming: [
-    "javascript",
-    "react",
-    "developer",
-    "programming",
-    "application",
-    "mobile",
-  ],
-  animals: [
-    "elephant",
-    "penguin",
-    "dolphin",
-    "kangaroo",
-    "butterfly",
-    "squirrel",
-  ],
-  countries: ["australia", "brazil", "canada", "germany", "japan", "morocco"],
-  movies: [
-    "inception",
-    "gladiator",
-    "avatar",
-    "titanic",
-    "interstellar",
-    "jaws",
-  ],
-};
+import wordsByCategory from "../data/wordLibrary";
+import BackButton from "./BackButton";
+import CategoryCarousel from "./CategoryCarousel";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Game = () => {
   // Game state
@@ -76,10 +51,13 @@ const Game = () => {
   useEffect(() => {
     if (!gameStarted) return;
 
-    // Win condition: all letters in the word have been guessed correctly
+    // Win condition: all non-space letters in the word have been guessed correctly
     const isWin =
       selectedWord &&
-      selectedWord.split("").every((letter) => correctLetters.includes(letter));
+      selectedWord
+        .split("")
+        .filter((letter) => letter !== " ") // Filter out spaces
+        .every((letter) => correctLetters.includes(letter));
 
     if (isWin) {
       setWin(true);
@@ -107,22 +85,15 @@ const Game = () => {
     return (
       <div className="game-setup">
         <h2>Hangman</h2>
-        <div className="category-selector">
-          <label htmlFor="category-select">Choose a category: </label>
-          <select
-            id="category-select"
-            value={currentCategory}
-            onChange={(e) => handleCategoryChange(e.target.value)}
-          >
-            {categories.map((category) => (
-              <option key={category} value={category}>
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </option>
-            ))}
-          </select>
-        </div>
+
+        <CategoryCarousel
+          categories={categories}
+          onSelect={setCurrentCategory}
+        />
+
         <button className="start-button" onClick={startGame}>
-          Start Game
+          Start Game with{" "}
+          {currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)}
         </button>
       </div>
     );
@@ -131,6 +102,12 @@ const Game = () => {
   // Render game screen
   return (
     <div className="game-container">
+      <div className="game-controls">
+        <BackButton
+          onClick={() => setGameStarted(false)}
+          text="← Back to Menu"
+        />
+      </div>
       <div className="game-info">
         <p>
           Category:{" "}
