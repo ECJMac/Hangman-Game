@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+**Hangman Game**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, React-based implementation of the classic Hangman word-guessing game. This project was created as part of a portfolio to demonstrate front-end development skills.
 
-## Available Scripts
 
-In the project directory, you can run:
+**Live Demo**
 
-### `npm start`
+The game is deployed and playable at: (https://hangman-game-chi-nine.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Features**
 
-### `npm test`
+Interactive gameplay with virtual keyboard
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Multiple word categories (Programming, Animals, Countries, Movies)
 
-### `npm run build`
+Category selection before starting a game
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Mobile-responsive design for gameplay on any device
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Visual hangman display that updates with incorrect guesses
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Win/lose game states with option to play again
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Technologies Used**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React (Create React App)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+JavaScript (ES6+)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+HTML5
 
-## Learn More
+CSS3
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Git/GitHub for version control
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Vercel for deployment
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Project Structure**
 
-### Analyzing the Bundle Size
+src/components/Game.js - Main game logic and state management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+src/components/Word.js - Word display component
 
-### Making a Progressive Web App
+src/components/Keyboard.js - Virtual keyboard component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+src/components/Hangman.js - SVG-based hangman visualization
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Getting Started**
 
-### Deployment
+**Prerequisites**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Node.js 18+ and npm
 
-### `npm run build` fails to minify
+**Installation**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clone the repository:
+
+bashCopygit clone https://github.com/ECJMac/Hangman-Game.git
+
+Navigate to the project directory:
+
+bashCopycd hangman-game
+
+Install dependencies:
+
+bashCopynpm install
+
+Start the development server:
+
+bashCopynpm start
+
+Open http://localhost:3000 to view it in the browser.
+
+
+**Planned Enhancements**
+
+**Gameplay Enhancements**
+
+ Difficulty levels (Easy, Medium, Hard)
+
+ Scoring system with high scores
+ 
+ Hint system for words
+ 
+ Timer for additional challenge
+
+**Visual Improvements**
+
+ Animations for correct/incorrect guesses
+ 
+ Theme options (Light/Dark mode)
+ 
+ Enhanced hangman visualization
+
+**Technical Enhancements**
+
+ Fetch words from an external API
+ 
+ User accounts and leaderboards
+ 
+ Convert to Progressive Web App (PWA)
+ 
+ Add sound effects
+
+
+**Portfolio Context**
+
+This project is part of a larger portfolio that includes:
+
+Hangman Game (Current project)
+
+Online Marketplace (Planned)
+
+Weather Application with API Integration (Planned)
+
+Personal Portfolio Website (Planned)
+
+
+**License**
+
+This project is open source and available under the MIT License.
+
+**Acknowledgments**
+
+Created as part of a software development portfolio project
+Word categories and game design inspired by classic Hangman games
