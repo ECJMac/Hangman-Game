@@ -63,7 +63,6 @@ const Game = () => {
       setWin(true);
       setGameOver(true);
     }
-    //deployment
 
     // Lose condition: 6 wrong guesses (head, body, 2 arms, 2 legs)
     if (wrongLetters.length === 6) {
@@ -93,8 +92,7 @@ const Game = () => {
         />
 
         <button className="start-button" onClick={startGame}>
-          Start Game with{" "}
-          {currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)}
+          Start Game
         </button>
       </div>
     );
