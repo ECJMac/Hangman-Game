@@ -1,9 +1,24 @@
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Computer,
+  PawPrint,
+  Earth,
+  Clapperboard,
+} from "lucide-react";
 
 const CategoryCarousel = ({ categories, onSelect }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+
+  // Map of category icons
+  const categoryIcons = {
+    programming: <Computer size={35} />,
+    animals: <PawPrint size={35} />,
+    countries: <Earth size={35} />,
+    movies: <Clapperboard size={35} />,
+  };
 
   // Update the parent component whenever the active index changes
   const handleCategoryChange = (newIndex) => {
@@ -104,7 +119,7 @@ const CategoryCarousel = ({ categories, onSelect }) => {
                     itemData.isActive ? "active" : ""
                   }`}
                 >
-                  {displayName.charAt(0)}
+                  {categoryIcons[itemData.category]}
                 </div>
                 <h3
                   className={`category-title ${

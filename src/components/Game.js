@@ -84,7 +84,7 @@ const Game = () => {
   if (!gameStarted) {
     return (
       <div className="game-setup">
-        <h2>Hangman</h2>
+        <h2>Choose a Category</h2>
 
         <CategoryCarousel
           categories={categories}
